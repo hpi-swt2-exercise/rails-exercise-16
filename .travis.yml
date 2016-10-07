@@ -1,6 +1,7 @@
 language: ruby
 rvm:
   - 2.2
+cache: bundler
 script:
  - RAILS_ENV=test bundle exec rake db:migrate
  - bundle exec rspec spec/
@@ -10,7 +11,7 @@ before_install:
  - sudo pip install -r travis/requirements.txt
  - python ./travis/try_issues.py
 after_success:
-- openssl aes-256-cbc -a -d -pass pass:travis -in travis/check.txt | echo
+- openssl aes-256-cbc -a -d -pass pass:travis -in travis/check.txt | cat
 - git config --global user.email "hpi.swt2@gmail.com"
 - git config --global user.name "swt2public"
 - git checkout -b travis-tmp
