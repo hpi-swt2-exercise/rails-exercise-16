@@ -82,7 +82,7 @@ rails s -b 0 #starting rails server, the -b part is necessary since the app is r
 
 Tips:
 
-* This exercise is designed to be solved while reading the official [Rails tutorial](guides.rubyonrails.org/getting_started.html)
+* This exercise is designed to be solved while reading the official [Rails tutorial](http://guides.rubyonrails.org/getting_started.html)
 * run `rspec spec/<path_to_spec>.rb` to only run one set of specs
 * have a look at `/spec/factories` to get 'inspiration' for your data model
 * Besides simple scaffolds, [associations](http://guides.rubyonrails.org/association_basics.html) and [validations](http://guides.rubyonrails.org/active_record_validations.html) are needed ...
