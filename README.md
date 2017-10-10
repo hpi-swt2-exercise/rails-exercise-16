@@ -1,25 +1,15 @@
-# SWT2 2016/17 - Introductory Exercise
+# SWT2 2017/18 - Introductory Exercise
 
 We prepared an application skeleton for you that has a failing test case.
 
 To pass the exercise, follow these steps:
 
-## 1) Fork this repository.
-
-* You need to be logged-in with your Github account.
-* Click the "Fork" button in the upper right. 
-
-![fork](https://cloud.githubusercontent.com/assets/1652117/19190800/ce8e6a42-8c9f-11e6-8047-60a238fcd200.png)
-* In your [repository's settings](/../../settings), enable issue tracking.
-
-![issues](https://cloud.githubusercontent.com/assets/1652117/19190926/65ee376e-8ca0-11e6-8755-5e67eaf37cab.png)
-
-## 2) Set-up Travis CI for your fork
+## 1) Set-up Travis CI for your repository
 
 * Log-in to [Travis CI](http://travis-ci.org) and
-* Enable automatic builds for your exercise repository.
+* Enable automatic builds for your exercise repository (add the hpi-swt2-exercise group to the list on the left and activate the builds for your repository by flicking the switch on)
 
-## 3) Setup development environment
+## 2) Setup development environment
 
 * Clone the repository to your local machine
 
@@ -33,7 +23,7 @@ To pass the exercise, follow these steps:
 
 ### Option 2: Use a VM
 * Install [Virtualbox](https://www.virtualbox.org/manual/ch02.html) (the VM provider) and [Vagrant](https://www.vagrantup.com/docs/installation/) (to manage VMs) for your platform.
-* Download the prepared VM image and install the dependencies:
+* Run these commands in the root directory of your cloned repository to download and the prepare the VM image:
 
 ```
 vagrant up # download the image and start the VM
@@ -50,25 +40,27 @@ cd hpi-swt2
 rails s -b 0 #starting rails server, the -b part is necessary since the app is running in a VM and would otherwise drop the requests coming from the host OS
 ```
 
+* You can open the application in your web browser via http://127.0.0.1:3000/
 * Edits to files in the local folder will be mirrored into the VM's `hpi-swt2` folder as the folders are synced.
+* We recommend you to open one terminal session that runs the development server and another one to execute commands on the maschine (e.g., running tests). Thereby, you do not have to restart the server after each command.
 
-## 4) Dive into the code
+## 3) Dive into the code
 
 * Run `bundle install` to install the dependencies of the project (they are stored in the `Gemfile`)
 * Run `rspec` to run the tests ([RSpec](http://rspec.info/) is a test framework for Ruby)
 * Try to get the failing test green.
 
-## 5) Commit and push
+## 4) Commit and push
 
 * When you are done, push your changes.
 * Travis CI will now try to build your project.
 
-## 6) Check your inbox
+## 5) Check your inbox
 
 * You will be notified of problems via Github issues.
 * While you wait, see if your code can use some refactorings, continue reading the tutorial, or plan the next steps.
 
-## 7) For each ticket
+## 6) For each ticket
 
 * Write a test that documents the missing or failing behavior.
   * Unit tests are preferred.
@@ -78,7 +70,7 @@ rails s -b 0 #starting rails server, the -b part is necessary since the app is r
 * Fix the issue and commit all changes.
   * The commit message could be `<CHANGED THE THING>. Closes #<ISSUE NUMBER>`.
 
-## 8) Repeat steps 5 to 7 until the exercise is complete.
+## 7) Repeat steps 4 to 6 until the exercise is complete.
 
 Tips:
 
