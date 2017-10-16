@@ -40,7 +40,7 @@ cd hpi-swt2
 rails s -b 0 #starting rails server, the -b part is necessary since the app is running in a VM and would otherwise drop the requests coming from the host OS
 ```
 
-* You can open the application in your web browser via http://127.0.0.1:3000/
+* You can open the application in your web browser via http://localhost:3000/
 * Edits to files in the local folder will be mirrored into the VM's `hpi-swt2` folder as the folders are synced.
 * We recommend you to open one terminal session that runs the development server and another one to execute commands on the maschine (e.g., running tests). Thereby, you do not have to restart the server after each command.
 
