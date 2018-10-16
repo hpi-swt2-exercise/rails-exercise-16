@@ -1,4 +1,4 @@
-# SWT2 2017/18 - Introductory Exercise
+# SWT2 2018/19 - Introductory Exercise
 
 We prepared an application skeleton for you that has a failing test case.
 
@@ -42,7 +42,7 @@ rails s -b 0 #starting rails server, the -b part is necessary since the app is r
 
 * You can open the application in your web browser via http://localhost:3000/
 * Edits to files in the local folder will be mirrored into the VM's `hpi-swt2` folder as the folders are synced.
-* We recommend you to open one terminal session that runs the development server and another one to execute commands on the maschine (e.g., running tests). Thereby, you do not have to restart the server after each command.
+* We recommend you to open one terminal session that runs the development server and another one to execute commands on the machine (e.g. running tests). Then you do not have to restart the server after each command.
 
 ## 3) Dive into the code
 
