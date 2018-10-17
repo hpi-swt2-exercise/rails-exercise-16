@@ -29,6 +29,9 @@ To pass the exercise, follow these steps:
 vagrant up # download the image and start the VM
 vagrant ssh # connect via ssh
 cd hpi-swt2
+mkdir -p "$(rbenv root)"/plugins && git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
+rbenv install 2.5.0 #install current ruby
+ruby --version # check that 2.5.0 is being used
 bundle install # install dependencies
 exit # restarting the session for changes to take effect
 ```
