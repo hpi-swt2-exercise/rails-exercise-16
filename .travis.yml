@@ -1,7 +1,6 @@
 language: ruby
-rvm:
-  - 2.3
 cache: bundler
+# Travis CI uses the version specified in the .ruby-version file in the root of the repository.
 git:
   depth: 1000
 script:
