@@ -1,24 +1,26 @@
 # SWT2 2018/19 - Introductory Exercise
 
-We prepared an application skeleton for you that has a failing test case.
+This is an interactive [Ruby on Rails](https://rubyonrails.org/) exercise, based partly on the ["Getting Started with Rails"](https://guides.rubyonrails.org/getting_started.html) guide. Interactivity is provided by opening issues in the GitHub issue tracker (through a CI server) that contain instructions on what tasks to tackle next.
 
-To pass the exercise, follow these steps:
+We prepared an application stub of an academic paper management system for you that has a failing test case.
+
+Follow these steps to complete the software and the exercise:
 
 ## 1) Set-up Travis CI for your repository
 
-* Log-in to [Travis CI](http://travis-ci.org) and
-* Enable automatic builds for your exercise repository (add the hpi-swt2-exercise group to the list on the left and activate the builds for your repository by flicking the switch on)
+* Log-in to [Travis CI](http://travis-ci.org)
+* Enable automatic builds for your exercise repository (add the hpi-swt2-exercise group to the list on the left and activate builds for your repository)
 
-## 2) Setup development environment
+## 2) Setup local development environment
 
 * Clone the repository to your local machine
 
 ### Option 1: Setup locally
 * Change into the newly created directoy
-* Inside the directory, check the used Ruby version using `ruby --version`. It should be `2.2.2`. Other Ruby versions might work, but this is the one that was tested.
+* Inside the directory, check the used Ruby version using `ruby --version`. It should be `2.5.0`. Other Ruby versions might work, but this is the one that was tested.
 * If the correct Ruby version is not used, install a ruby version manager, for example [rbenv](https://github.com/rbenv/rbenv) using the instructions for [rbenv installation](https://github.com/rbenv/rbenv#basic-github-checkout) and [ruby-build installation](https://github.com/rbenv/ruby-build#installing-as-an-rbenv-plugin-recommended).
   * WARNING: If you already have the Ruby version manager [RVM](https://rvm.io/) installed, please use that or uninstall it prior to rbenv installation, as the two version managers are incompatible.
-* Install Ruby version 2.2.2 with `rbenv install 2.2.2`
+* Install Ruby version 2.5.0  with `rbenv install 2.5.0` (this might take a few minutes, as Ruby is being compiled)
 * The `.ruby_version` file in the repository instructs the ruby version manager to use the correct version.
 
 ### Option 2: Use a VM
@@ -29,6 +31,9 @@ To pass the exercise, follow these steps:
 vagrant up # download the image and start the VM
 vagrant ssh # connect via ssh
 cd hpi-swt2
+mkdir -p "$(rbenv root)"/plugins && git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
+rbenv install 2.5.0 #install current ruby
+ruby --version # check that 2.5.0 is being used
 bundle install # install dependencies
 exit # restarting the session for changes to take effect
 ```
@@ -55,15 +60,14 @@ rails s -b 0 #starting rails server, the -b part is necessary since the app is r
 * When you are done, push your changes.
 * Travis CI will now try to build your project.
 
-## 5) Check your inbox
+## 5) Check your inbox / issues
 
-* You will be notified of problems via Github issues.
+* You will be notified of problems via GitHub issues.
 * While you wait, see if your code can use some refactorings, continue reading the tutorial, or plan the next steps.
 
 ## 6) For each ticket
 
 * Write a test that documents the missing or failing behavior.
-  * Unit tests are preferred.
 * Commit the failing test and reference the issue.
   * The commit message could be `Failing test for #<ISSUE NUMBER>`.
   * There is no need to push the failing commit.
@@ -74,11 +78,11 @@ rails s -b 0 #starting rails server, the -b part is necessary since the app is r
 
 Tips:
 
-* This exercise is designed to be solved while reading the official [Rails tutorial](http://guides.rubyonrails.org/v4.2/getting_started.html)
-* run `rspec spec/<path_to_spec>.rb` to only run one set of specs
-* have a look at `/spec/factories` to get 'inspiration' for your data model
-* Besides simple scaffolds, [associations](http://guides.rubyonrails.org/association_basics.html) and [validations](http://guides.rubyonrails.org/active_record_validations.html) are needed ...
-* occasionally start up the server (`rails s`) and have a look at the app in your browser (`http://localhost:3000`)
+* The beginning of this exercise is designed to be solved while reading the official [Rails tutorial](https://guides.rubyonrails.org/getting_started.html)
+* Run `rspec spec/<path_to_spec>.rb` to only run one set of specs
+* Have a look at `/spec/factories` to get 'inspiration' for your data model
+* Besides [generators](https://guides.rubyonrails.org/command_line.html#rails-generate) and scaffolds, [associations](http://guides.rubyonrails.org/association_basics.html) and [validations](http://guides.rubyonrails.org/active_record_validations.html) are needed.
+* Occasionally start up the server (`rails s`) and have a look at the app in your browser (`http://localhost:3000`)
 * Look at the Mockup: https://gomockingbird.com/mockingbird/index.html?project=v890g6l#v890g6l/OQMURm
 * Make sure that all local changes are committed (`git status`) and pushed to the upstream repository (i.e., the one on GitHub) before the deadline
 

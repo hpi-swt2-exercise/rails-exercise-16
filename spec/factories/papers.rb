@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :paper do
 #    title "COMPUTING MACHINERY AND INTELLIGENCE"
 #    venue "Mind 49: 433-460"
