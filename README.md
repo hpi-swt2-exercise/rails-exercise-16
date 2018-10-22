@@ -5,11 +5,13 @@ This is an interactive [Ruby on Rails](https://rubyonrails.org/) exercise, based
 We prepared an application stub of an academic paper management system for you that has a failing test case.
 
 Follow these steps to complete the software and the exercise:
+## 1) Set-up your repository
 
-## 1) Set-up Travis CI for your repository
+* Log-in to [Travis CI](http://travis-ci.org) and enable automatic builds for your exercise repository (add the hpi-swt2-exercise group to the list on the left and flip the switch)
+<img src="./travis/activate_travis.png" alt="drawing" width="600"/>
 
-* Log-in to [Travis CI](http://travis-ci.org)
-* Enable automatic builds for your exercise repository (add the hpi-swt2-exercise group to the list on the left and activate builds for your repository)
+* Ensure that the issue tracker of the repository is active. This can be done in the repository's "Settings" tab.
+<img src="./travis/gh_issues_setting.png" alt="drawing" width="600"/>
 
 ## 2) Setup local development environment
 
