@@ -59,21 +59,21 @@ rails s -b 0 #starting rails server, the -b part is necessary since the app is r
 
 ## 4) Commit and push
 
-* When you are done, push your changes.
-* Travis CI will now try to build your project.
+* When you are done and the test passes, push your changes.
+* Travis CI will now try to build and test your project.
 
 ## 5) Check your inbox / issues
 
-* You will be notified of problems via GitHub issues.
+* You will be notified of problems or new exercise work items via GitHub issues on your repository.
 * While you wait, see if your code can use some refactorings, continue reading the tutorial, or plan the next steps.
 
 ## 6) For each ticket
 
-* Write a test that documents the missing or failing behavior.
+* Write a new test that documents the missing or failing behavior.
 * Commit the failing test and reference the issue.
   * The commit message could be `Failing test for #<ISSUE NUMBER>`.
   * There is no need to push the failing commit.
-* Fix the issue and commit all changes.
+* Fix the issue and make your test pass. Then commit the changes.
   * The commit message could be `<CHANGED THE THING>. Closes #<ISSUE NUMBER>`.
 
 ## 7) Repeat steps 4 to 6 until the exercise is complete.
