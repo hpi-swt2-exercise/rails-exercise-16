@@ -1,15 +1,17 @@
 # SWT2 2018/19 - Introductory Exercise
 
-We prepared an application skeleton for you that has a failing test case.
+This is an interactive [Ruby on Rails](https://rubyonrails.org/) exercise, based partly on the ["Getting Started with Rails"](https://guides.rubyonrails.org/getting_started.html) guide. Interactivity is provided by opening issues in the GitHub issue tracker (through a CI server) that contain instructions on what tasks to tackle next.
 
-To pass the exercise, follow these steps:
+We prepared an application stub of an academic paper management system for you that has a failing test case.
+
+Follow these steps to complete the software and the exercise:
 
 ## 1) Set-up Travis CI for your repository
 
-* Log-in to [Travis CI](http://travis-ci.org) and
-* Enable automatic builds for your exercise repository (add the hpi-swt2-exercise group to the list on the left and activate the builds for your repository by flicking the switch on)
+* Log-in to [Travis CI](http://travis-ci.org)
+* Enable automatic builds for your exercise repository (add the hpi-swt2-exercise group to the list on the left and activate builds for your repository)
 
-## 2) Setup development environment
+## 2) Setup local development environment
 
 * Clone the repository to your local machine
 
@@ -58,15 +60,14 @@ rails s -b 0 #starting rails server, the -b part is necessary since the app is r
 * When you are done, push your changes.
 * Travis CI will now try to build your project.
 
-## 5) Check your inbox
+## 5) Check your inbox / issues
 
-* You will be notified of problems via Github issues.
+* You will be notified of problems via GitHub issues.
 * While you wait, see if your code can use some refactorings, continue reading the tutorial, or plan the next steps.
 
 ## 6) For each ticket
 
 * Write a test that documents the missing or failing behavior.
-  * Unit tests are preferred.
 * Commit the failing test and reference the issue.
   * The commit message could be `Failing test for #<ISSUE NUMBER>`.
   * There is no need to push the failing commit.
@@ -77,11 +78,11 @@ rails s -b 0 #starting rails server, the -b part is necessary since the app is r
 
 Tips:
 
-* This exercise is designed to be solved while reading the official [Rails tutorial](http://guides.rubyonrails.org/v4.2/getting_started.html)
-* run `rspec spec/<path_to_spec>.rb` to only run one set of specs
-* have a look at `/spec/factories` to get 'inspiration' for your data model
-* Besides simple scaffolds, [associations](http://guides.rubyonrails.org/association_basics.html) and [validations](http://guides.rubyonrails.org/active_record_validations.html) are needed ...
-* occasionally start up the server (`rails s`) and have a look at the app in your browser (`http://localhost:3000`)
+* The beginning of this exercise is designed to be solved while reading the official [Rails tutorial](https://guides.rubyonrails.org/getting_started.html)
+* Run `rspec spec/<path_to_spec>.rb` to only run one set of specs
+* Have a look at `/spec/factories` to get 'inspiration' for your data model
+* Besides [generators](https://guides.rubyonrails.org/command_line.html#rails-generate) and scaffolds, [associations](http://guides.rubyonrails.org/association_basics.html) and [validations](http://guides.rubyonrails.org/active_record_validations.html) are needed.
+* Occasionally start up the server (`rails s`) and have a look at the app in your browser (`http://localhost:3000`)
 * Look at the Mockup: https://gomockingbird.com/mockingbird/index.html?project=v890g6l#v890g6l/OQMURm
 * Make sure that all local changes are committed (`git status`) and pushed to the upstream repository (i.e., the one on GitHub) before the deadline
 
