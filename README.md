@@ -67,14 +67,14 @@ rails s -b 0 #starting rails server, the -b part is necessary since the app is r
 * You will be notified of problems or new exercise work items via GitHub issues on your repository.
 * While you wait, see if your code can use some refactorings, continue reading the tutorial, or plan the next steps.
 
-## 6) For each ticket
+## 6) For each issue
 
 * Write a new test that documents the missing or failing behavior.
 * Commit the failing test and reference the issue.
   * The commit message could be `Failing test for #<ISSUE NUMBER>`.
   * There is no need to push the failing commit.
 * Fix the issue and make your test pass. Then commit the changes.
-  * The commit message could be `<CHANGED THE THING>. Closes #<ISSUE NUMBER>`.
+  * While an issue is open, the exercise will create comments on the issue
 
 ## 7) Repeat steps 4 to 6 until the exercise is complete.
 
