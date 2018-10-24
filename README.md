@@ -87,5 +87,6 @@ Tips:
 * Besides [generators](https://guides.rubyonrails.org/command_line.html#rails-generate) and scaffolds, [associations](http://guides.rubyonrails.org/association_basics.html) and [validations](http://guides.rubyonrails.org/active_record_validations.html) are needed
 * Occasionally start up the server (`rails s`) and have a look at the app in your browser
 * Look at the Mockup: https://gomockingbird.com/mockingbird/index.html?project=v890g6l#v890g6l/OQMURm (author selection uses a multiple select in this version of the exercise)
+* `rails db:drop && rails db:migrate` deletes the database and recreates it. This might be helpful for error recovery.
 * Make sure that all local changes are committed (`git status`) and pushed to the upstream repository (i.e., the one on GitHub) before the deadline
 
